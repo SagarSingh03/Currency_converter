@@ -1,0 +1,180 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.currency-converter {
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #6b48ff 0%, #00ddeb 100%);
+    text-align: center;
+    padding: 20px;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 30px;
+    border-radius: 15px;
+    width: 100%;
+    max-width: 600px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+    font-size: 2.2rem;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #e74c3c;
+    padding-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+.home-logo {
+    width: 120px;
+    height: 120px;
+    display: block;
+    margin: 0 auto 20px;
+    transition: transform 0.3s ease;
+}
+
+.home-logo:hover {
+    transform: scale(1.1);
+}
+
+#userValue {
+    width: 100%;
+    max-width: 400px;
+    height: 45px;
+    border: 2px solid #3498db;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    text-align: center;
+    padding: 10px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+#userValue:focus {
+    border-color: #e74c3c;
+}
+
+.select-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+    gap: 10px;
+}
+
+#fromCurrency, #toCurrency {
+    width: 100%;
+    max-width: 180px;
+    height: 45px;
+    border: none;
+    border-radius: 8px;
+    background: #34495e;
+    color: white;
+    font-size: 1rem;
+    padding: 10px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+#fromCurrency:hover, #toCurrency:hover {
+    background: #2c3e50;
+}
+
+#switchCurrency {
+    width: 50px;
+    height: 45px;
+    border: none;
+    border-radius: 8px;
+    background: #e74c3c;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+#switchCurrency:hover {
+    background: #c0392b;
+    transform: rotate(360deg);
+}
+
+#button {
+    width: 100%;
+    max-width: 400px;
+    height: 45px;
+    border: none;
+    border-radius: 8px;
+    background: #27ae60;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+#button:hover {
+    background: #219653;
+    transform: translateY(-2px);
+}
+
+#status, #result {
+    width: 100%;
+    max-width: 400px;
+    margin: 15px auto;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+#status {
+    background: rgba(241, 196, 15, 0.2);
+    color: #7f8c8d;
+    border: 1px solid #f1c40f;
+}
+
+#result {
+    background: rgba(46, 204, 113, 0.2);
+    color: #2c3e50;
+    border: 1px solid #2ecc71;
+}
+
+@media (max-width: 600px) {
+    .container {
+        width: 90%;
+        padding: 20px;
+    }
+
+    #userValue, #button, #status, #result {
+        max-width: 100%;
+    }
+
+    .select-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    #fromCurrency, #toCurrency {
+        max-width: 100%;
+    }
+
+    #switchCurrency {
+        width: 100%;
+        max-width: 50px;
+    }
+}
