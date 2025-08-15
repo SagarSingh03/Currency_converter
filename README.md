@@ -1,0 +1,1 @@
+A simple and responsive currency converter that uses real-time exchange rates to convert between global currencies instantly. Built with [your tech stack, e.g., HTML, CSS, JavaScript, React], it’s user-friendly and works across devices.
